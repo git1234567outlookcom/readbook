@@ -1,4 +1,6 @@
-#容器属性
+
+# 容器属性
+
 - flex-direction:
     - 排列方向
     - row 默认,水平 | row-reverse | column | column-reverse
@@ -19,7 +21,8 @@
     - 多行对齐方式 上下居中
     - flex-start | flex-end | center | space-between | space-around | stretch
 
-#项目属性
+# 项目属性
+
 - order
     - 排列顺序。数值越小，排列越靠前，默认为0
     - order: <integer>;

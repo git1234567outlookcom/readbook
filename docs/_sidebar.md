@@ -7,3 +7,4 @@
 * 帮助文档
     * [MarkDown](help/markdownhelp.md)
     * [docsify](help/docsifyhelp.md)
+    * [flex](help/flex.md)
