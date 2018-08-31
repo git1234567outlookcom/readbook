@@ -5,10 +5,6 @@
 
 ---
 
-### [csdn](https://blog.csdn.net/java_sparrow) &nbsp;&nbsp;&nbsp;&nbsp; 
-
----
-
 #### [oschina](https://www.oschina.net/) &nbsp;&nbsp;&nbsp;&nbsp; [csdn](https://blog.csdn.net/java_sparrow) &nbsp;&nbsp;&nbsp;&nbsp; [51cto](http://www.51cto.com/) &nbsp;&nbsp;&nbsp;&nbsp; [云栖社区](https://yq.aliyun.com/?spm=5176.11902989.1146454.19.2UFWrT) &nbsp;&nbsp;&nbsp;&nbsp; [juejin](https://juejin.im/) &nbsp;&nbsp;&nbsp;&nbsp; [geekpark](http://www.geekpark.net/)
 
 ---  
