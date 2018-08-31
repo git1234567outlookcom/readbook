@@ -295,15 +295,18 @@
 
 # 样本和总体
 
-总体平均值  population mean $$\mu = \frac{\sum_{i=0}^n x_i}{n} $$
-样本平均值  sample mean  $$\bar{X} = \frac{\sum_{i=0}^N x_i}{N}$$
+总体平均值  population mean 
+$$\mu = \frac{\sum_{i=0}^n x_i}{n}$$
+样本平均值  sample mean  
+$$\bar{X} = \frac{\sum_{i=0}^N x_i}{N}$$
 
 
 # 总体方差
 
 离中趋势衡量 dispersion 
 
-方差 $$\sigma^2 = \frac{\sum^N_{i=1} (x_i - \mu)^2}{N}$$
+方差 
+$$\sigma^2 = \frac{\sum^N_{i=1} (x_i - \mu)^2}{N}$$
 
 每个数到均值距离的平方之和除总个数
 
@@ -312,11 +315,13 @@
 
 推论统计学就是样本进行分析预测总体
 
-  样本均值 $$\bar{x} = \frac{\sum^n_{i=1} x_i}{n}$$
+样本均值 
+$$\bar{x} = \frac{\sum^n_{i=1} x_i}{n}$$
 
-  样本方差 $$s^2 =  \frac{ \sum^n _{i=1} (x_i - \bar{x})^2}{ n } $$
+样本方差 
+$$s^2 =  \frac{ \sum^n _{i=1} (x_i - \bar{x})^2}{ n } $$
 
-  样本的采取可能会影响样本方差和总体方差的差异比较大
+样本的采取可能会影响样本方差和总体方差的差异比较大
 
 有一种  无偏差样本方差
 
