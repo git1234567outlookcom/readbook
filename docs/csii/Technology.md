@@ -19,6 +19,6 @@
     - 图表    [echarts](http://echarts.baidu.com/examples/)
     
 - APP
-    - app UI    [Vux](https://vux.li/demos/v2/#/demo)
+    - UI    [Vux](https://vux.li/demos/v2/#/demo)
     - 图表    [F2](https://antv.alipay.com/zh-cn/f2/3.x/demo/index.html)
     
