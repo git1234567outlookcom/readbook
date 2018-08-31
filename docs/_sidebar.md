@@ -8,9 +8,9 @@
     * 概率论
     * 线性代数
    
-* Python
+* [Python](python/home.md)
 
-* Kali Linux
+* [Kali Linux](kali/home.md)
 
 * 帮助文档
     * [常用网站](help/utilweb.md)
