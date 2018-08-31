@@ -2,9 +2,10 @@
 # 技术体系
 
 - 基础   
+
     -  开发环境     [nodejs](http://nodejs.cn/download/)
     
-    -  ~~开发语言~~ [tslang](https://www.tslang.cn/docs/home.html)
+    -  开发语言 [~~TypeScript~~](https://www.tslang.cn/docs/home.html)
     
     -  前端技术     [Vue](https://cn.vuejs.org/v2/guide/)
     
