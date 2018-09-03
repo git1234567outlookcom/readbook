@@ -2,22 +2,16 @@
 # 前端技术体系
 
 - 基础   
-
-    -  开发环境     [nodejs](http://nodejs.cn/download/)
-    
-    -  开发语言 [~~TypeScript~~](https://www.tslang.cn/docs/home.html)
-    
-    -  前端技术     [Vue](https://cn.vuejs.org/v2/guide/)
-    
-    -  页面路由     [Vue Router](https://router.vuejs.org/zh/)
-    
+    -  开发环境     [nodejs](http://nodejs.cn/download/)   
+    -  开发语言 [~~TypeScript~~](https://www.tslang.cn/docs/home.html)   
+    -  前端框架     [Vue](https://cn.vuejs.org/v2/guide/) 
+    -  页面路由     [Vue Router](https://router.vuejs.org/zh/) 
     -  状态管理     [Vuex](https://vuex.vuejs.org/zh/)
-    
     -  发送请求     [axios](https://www.kancloud.cn/yunye/axios/234845)
-    
     -  打包工具     [webpack](https://webpack.js.org/)
+    -  页面样式 [~~scss~~](https://www.sass.hk/docs/)
+  
 - Web
-
     - UI    [element](http://element-cn.eleme.io/#/zh-CN/component/input)
     - 图表    [echarts](http://echarts.baidu.com/examples/)
     
