@@ -9,8 +9,9 @@
     -  页面路由     [Vue Router](https://router.vuejs.org/zh/) 
     -  状态管理     [Vuex](https://vuex.vuejs.org/zh/)
     -  发送请求     [axios](https://www.kancloud.cn/yunye/axios/234845)
-    -  打包工具     [webpack](https://webpack.js.org/)
-    -  页面样式预加载 [~~sass~~](https://www.sass.hk/docs/)
+    -  打包工具     [webpack](https://webpack.js.org/)  [~~yarn~~](https://yarn.bootcss.com/docs/getting-started/)
+    -  样式预加载 [~~sass~~](https://www.sass.hk/docs/)
+    -  页面布局 [~~Flex~~](https://www.runoob.com/w3cnote/flex-grammar.html)
   
 - Web
     - UI    [element](http://element-cn.eleme.io/#/zh-CN/component/input)
