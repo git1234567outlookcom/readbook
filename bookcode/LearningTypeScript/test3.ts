@@ -21,7 +21,7 @@ console.log(geetNamed('john'));
 console.log(greetUnnamed('john'));
 
 
-//  解释器会首先在代码解析阶段执行函数声明 
+//  解释器会首先在代码解析阶段执行函数声明
 //  除非函数表达式被赋值，否则不会被执行
 //  主要区别是变量提升的过程
 
@@ -39,8 +39,8 @@ add(1,2,3);
 // 默认参数
 
 function add2(a:number, b :number , c: number = 0 ): number{
-    //  c 的默认值为 0 
-    return a + b + c 
+    //  c 的默认值为 0
+    return a + b + c
 }
 
 
@@ -103,7 +103,8 @@ function foo1():void{
 
 // let 可以将作用域设置在代码段而不是函数中
 
-// 立即调用函数 
+// 立即调用函数
+// 立即调用函数表达式是一种设计模式
 // 使用函数作用域作为一个词法作用域
 // 可以被用于防止全局作用域中的变量提升导致的污染
 
