@@ -1,3 +1,6 @@
+
+[可汗学院公开课：统计学](http://open.163.com/special/Khan/khstatistics.html)
+
 # 基础数据按性质
 
 - 定性数据：用于频数或者频率分析
