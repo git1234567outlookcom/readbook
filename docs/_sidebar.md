@@ -3,9 +3,9 @@
 * 读书笔记
     * [《现在前端技术解析》](readlog/现在前端技术解析.md)
     * [《Learning TypeScript》](readlog/learningtypescript.md)
-    
+    * [可汗学院公开课：统计学](readlog/khstatistics.md)
 * 数学基础
-    * [统计学](math/tongjixue.md)
+   
     * 概率论
     * 线性代数
    
