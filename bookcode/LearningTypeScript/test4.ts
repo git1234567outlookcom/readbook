@@ -11,7 +11,7 @@ class Person {
     }
 
     greet(){
-        alert('hi')
+        alert('hi ')
     }
 
 }
