@@ -15,6 +15,7 @@
 
 * 帮助文档
     * [常用网站](help/utilweb.md)
+    * [IntelliJ IDEA](help/intellijideahelp.md)
     * [MarkDown](help/markdownhelp.md)
     * [docsify](help/docsifyhelp.md)
     * [flex](help/flex.md)

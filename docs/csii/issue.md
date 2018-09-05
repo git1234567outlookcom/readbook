@@ -2,7 +2,7 @@
 
 ---
 
-> vue兼容ie11
+# vue兼容ie11
 
 
 ```javascript
@@ -14,3 +14,5 @@ app: ["babel-polyfill", "./src/main.js"]
 ```
 
 ---
+
+

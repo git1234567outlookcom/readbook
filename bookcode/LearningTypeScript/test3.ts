@@ -142,7 +142,7 @@ function htmlEscape(literals, ...placeholdre) {
   return result;
 }
 
-//  回调函数
+// 回调函数
 // 函数可以作为参数传给其他函数
 // 被传递给其他函数的函数叫做回调
 // 函数也可以被另一个函数返回
@@ -166,7 +166,8 @@ bar2(f2);
 
 class Person {
   name: string;
-  constructor(name: string) {
+
+    constructor(name: string, surname: string, email: string) {
     this.name = name;
   }
   greet() {
@@ -175,7 +176,7 @@ class Person {
   }
 }
 
-var remo = new Person("liu");
+var remo = new Person("liu", surname, email);
 
 remo.greet();
 
