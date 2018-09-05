@@ -163,3 +163,118 @@ function bar2(cb: () => void) {
 bar2(f2);
 
 // 箭头函数
+
+class Person {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+  greet() {
+    //  方法内部， this 操作符 指向 装载了greet 方法的对象
+    alert("hi , my name  is $(this.name)");
+  }
+}
+
+var remo = new Person("liu");
+
+remo.greet();
+
+//  当定义一个异步函数时或回调函数
+// this关键字就会改变它指向的指
+// 指向匿名函数
+
+class Person2 {
+  name: string;
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  greet() {
+    alert("hi  my name is $(this.name)");
+  }
+  greetDelay(time: number) {
+    setTimeout(() => {
+      alert("hi my name is  $(this.name");
+    }, time);
+  }
+}
+
+// 通过使用箭头函数
+//  可以保证 this操作符指向 是实例 而不是 回调函数
+// ts 编译器会生成一个_this的别名，来确保this 指向 的是正确的对象
+
+// 回调函数问题
+
+// promise
+// 对异步操作结果的一个承诺
+
+//  pending ：promise的初始化状态
+// fulfilled：代表异步操作成功的promise状态
+// rejected：代表异步操作失败的promise状态
+
+function fooo() {
+  return new Promise((fulfill, reject) => {
+    try {
+      fulfill();
+    } catch (e) {
+      reject();
+    }
+  });
+}
+
+//
+
+class ViewAsync {
+  private _container: string;
+  private _templateUrl: string;
+  private _serviceUrl: string;
+  private _agrs: any;
+
+  constructor(config) {
+    this._container = config.container;
+    this._templateUrl = config.templateUrl;
+    this._serviceUrl = config.serviceUrl;
+    this._agrs = config.agrs;
+  }
+}
+// 生成器
+//调用一个函数，这个函数开始运行，在它运行完成之前其他代码都不能运行
+// 一种新的函数可能会在函数执行的过程中将这个函数暂停一次或多次
+// 并在随后恢复它的运行
+// 而且可以让其他代码在暂停的过程中运行
+// 这种新型的函数被成为生成器
+// 一个生成器代表了一个值的序列
+// 生成器对象的接口只是一个迭代器
+// 可以使用next（)函数来使他产生结果
+
+// 可以使用function 关键字后跟着一个 * 定以一个生成器的构造函数
+// yield 关键字被用来暂停函数的执行并返回一个值
+
+function* foo3() {
+  yield 1;
+  yield 2;
+  return 3;
+}
+
+// 有返回值的函数不能使用new
+var f3 = foo3();
+
+f3.next();
+
+//  无限循环不会移除
+function* fo4() {
+  var i = 1;
+  while (true) {
+    yield i++;
+  }
+}
+
+// 异步函数
+// 在异步操作中被调用的函数
+// 可以使用awair关键字等待异步结果的到来而不会阻塞程序的执行
+
+// var p = Promise < number> = /* ... */;
+// async function fn() :Promise<number> {
+//   var i = await p;
+//   return 1 + i
+// }
