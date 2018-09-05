@@ -8,6 +8,7 @@
   * [统计学](math/tongjixue.md)
   * 概率论
   * 线性代数
+  
 * [Python](python/home.md)
 
 * [Kali Linux](kali/home.md)
