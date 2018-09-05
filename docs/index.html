@@ -7,59 +7,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="description" content="Description">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <!-- 主题 -->
-   
+
 </head>
 
 <body>
-    <div id="app"></div>
-    <script>
-        window.$docsify = {
-                name: '目录', //标题
-                repo: '', //github
-                homepage: 'home.md',
-                loadSidebar: true, //目录
-                alias: { //侧边栏
-                    '/.*/_sidebar.md': '/_sidebar.md'
-                },
+<div id="app"></div>
+<script>
+    window.$docsify = {
+        name: '目录', //标题
+        repo: '', //github
+        homepage: 'home.md',
+        loadSidebar: true, //目录
+        alias: { //侧边栏
+            '/.*/_sidebar.md': '/_sidebar.md'
+        },
 
-                subMaxLevel: 2, //侧边栏二级目录
+        subMaxLevel: 2, //侧边栏二级目录
 
-                // 完整配置参数
-                search: {
-                    maxAge: 86400000, // 过期时间，单位毫秒，默认一天
-                    paths: 'auto', // or 'auto'
-                    placeholder: '搜索',
-                    // 搜索标题的最大程级, 1 - 6
-                    depth: 6
-                },
-                executeScript: true,
-                plugins: [
-                    function(hook, vm) {
-                        hook.doneEach(function(html, next) {
-                            MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-                            MathJax.Hub.Config({
-                                tex2jax: {
-                                    inlineMath: [
-                                        ['$', '$']
-                                    ],
-                                    displayMath: [
-                                        ['$$', '$$']
-                                    ]
-                                }
-                            });
-                        })
-                    }
-                ]
+        // 完整配置参数
+        search: {
+            maxAge: 86400000, // 过期时间，单位毫秒，默认一天
+            paths: 'auto', // or 'auto'
+            placeholder: '搜索',
+            // 搜索标题的最大程级, 1 - 6
+            depth: 6
+        },
+        executeScript: true,
+        plugins: [
+            function(hook, vm) {
+                hook.doneEach(function(html, next) {
+                    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+                    MathJax.Hub.Config({
+                        tex2jax: {
+                            inlineMath: [
+                                ['$', '$']
+                            ],
+                            displayMath: [
+                                ['$$', '$$']
+                            ]
+                        }
+                    });
+                })
             }
-            // 离线缓存
-            // if (typeof navigator.serviceWorker !== 'undefined') {
-            //     navigator.serviceWorker.register('./sw.js')
-            // }
-    </script>
-    <script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
-    <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-    <script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
+        ]
+    }
+    // 离线缓存
+    // if (typeof navigator.serviceWorker !== 'undefined') {
+    //     navigator.serviceWorker.register('./sw.js')
+    // }
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+<script src="//unpkg.com/docsify/lib/plugins/search.js"></script>
 
 </body>
 
