@@ -1,4 +1,4 @@
-# learning TypeScript
+# Learning TypeScript
 
 # TypeScript 简介
 

@@ -9,6 +9,17 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <!-- 主题 -->
     <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dark.css">
+    <style type="text/css">
+        .app-sub-sidebar{
+            width: 285px;
+            position: fixed;
+            top: 110px;
+            right: 15px;
+        }
+        .content {
+            left: -299px;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,7 +34,7 @@
             '/.*/_sidebar.md': '/_sidebar.md'
         },
 
-        subMaxLevel: 2, //侧边栏二级目录
+        subMaxLevel: 1, //侧边栏二级目录
 
         // 完整配置参数
         search: {
@@ -50,7 +61,8 @@
                     });
                 })
             }
-        ]
+        ],
+
     }
     // 离线缓存
     // if (typeof navigator.serviceWorker !== 'undefined') {

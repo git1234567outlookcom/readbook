@@ -1,13 +1,12 @@
 * [前端技术体系](csii/Technology.md)
 
 * 读书笔记
-    * 前端
-        * [《现在前端技术解析》](readlog/现在前端技术解析.md)
-        * [《Learning TypeScript》](readlog/learningtypescript.md)
-        
-    * 基础
-        * [可汗学院公开课：统计学](readlog/khstatistics.md)  
-        
+    
+    * [《现在前端技术解析》](readlog/现在前端技术解析.md)
+    * [《Learning TypeScript》](readlog/learningtypescript.md)
+    
+    * [可汗学院公开课：统计学](readlog/khstatistics.md)
+
     * [Python](python/home.md)
     
     * [Kali Linux](kali/home.md)
