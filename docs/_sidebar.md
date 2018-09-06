@@ -7,9 +7,6 @@
     
     * [可汗学院公开课：统计学](readlog/khstatistics.md)
 
-    * [Python](python/home.md)
-    
-    * [Kali Linux](kali/home.md)
 
 * 帮助文档
     * [常用网站](help/utilweb.md)
