@@ -19,6 +19,9 @@ class Person {
 
 var person = new Person('liu','hua');
 
+
+
+
 person.greet.call(person,'liu','hua');
 
 person.greet.apply(person,['liu','hua']);
