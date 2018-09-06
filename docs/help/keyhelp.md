@@ -4,9 +4,12 @@
 ## Visual Studio Code 
 
 - option = alt
+
+
 - shift+option+down  向下复制行
 - alt+down 向下移动行
 - alt+left 上一个编辑的地方
+- command left  行尾
  
 - ctrl+shift+5 拆分终端
 
