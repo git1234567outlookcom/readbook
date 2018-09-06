@@ -109,19 +109,43 @@ function factoryNotWorking<T>() : T {
 //======== 里氏替换原则
 
 
+interface PersistanceServiceInterface{
+    save(entry :any):number;
+}
 
 
 
+// 命名空间
+// 命名空间可以嵌套
+
+namespace  app {
+    // 可以使用export 关键字导出公共部分
+    export  class UserModel {
+        
+    }
+}
+
+
+// 模块
 
 
 
+class  UserModuel {
+
+}
+
+export { UserModuel  as User }; // 使用别名
+
+// 如果接口和类名相同 则都输出
 
 
+//   es6  运行时与程序设计时引入一个模块
+
+// import {User} from  './'
+
+//外部语法模块  仅在程序设计阶段可用
 
 
-
-
-
-
+//import User = require('./')
 
 
