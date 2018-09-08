@@ -10,7 +10,6 @@
 - alt+down 向下移动行
 - alt+left 上一个编辑的地方
 - command left  行尾
- 
 - ctrl+shift+5 拆分终端
 
 ## IntellJ IDEA 常用快捷键
