@@ -290,11 +290,11 @@
 
 > 总体平均值 population mean
 
-$\mu=\frac{\sum\_{i=0}^nx_i}{n}$
+$$\mu=\frac{\sum\_{i=0}^nx_i}{n}$$
 
 > 样本平均值 sample mean
 
-$\bar{X}=\frac{\sum\_{i=0}^Nx_i}{N}$
+$$\bar{X}=\frac{\sum\_{i=0}^Nx_i}{N}$$
 
 # 总体方差
 
@@ -302,7 +302,7 @@ $\bar{X}=\frac{\sum\_{i=0}^Nx_i}{N}$
 
 > 方差
 
-$\sigma^2=\frac{\sum^N\_{i=1}(x_i-\mu)^2}{N}$
+$$\sigma^2=\frac{\sum^N\_{i=1}(x_i-\mu)^2}{N}$$
 
 每个数到均值距离的平方之和除总个数
 
@@ -312,17 +312,17 @@ $\sigma^2=\frac{\sum^N\_{i=1}(x_i-\mu)^2}{N}$
 
 > 样本均值
 
-$\bar{x}=\frac{\sum^n\_{i=1}x_i}{n}$
+$$\bar{x}=\frac{\sum^n\_{i=1}x_i}{n}$$
 
 > 样本方差公式
 
-$s^2=\frac{\sum^n\_{i=1}(x_i-\bar{x})^2}{n}$
+$$s^2=\frac{\sum^n\_{i=1}(x_i-\bar{x})^2}{n}$$
 
 样本的采取可能会影响样本方差和总体方差的差异比较大
 
 > 无偏差样本方差
 
-$s^2=s^2*{n-1}=\frac{\sum^n*{i=1}(x_i-\bar{x})^2}{n-1}$
+$$ s^2 = s^2{n-1} = \frac {\sum^n{i=1} (x_i-\bar{x})^2} {n-1}$$
 
 # 标准差
 
