@@ -24,3 +24,17 @@ class Person {
         return this.name + " " + this.surname +"says: " + something;
     }
 }
+
+
+
+import 'reflect-metadata'
+
+class Demo {
+    @logType
+    public  attr1:string;
+}
+
+function logType(target:any,key:string) {
+    var t = Reflect.getMetadata('design:type',target,key);
+    console.log(`${key} type: ${t.name}`);
+}

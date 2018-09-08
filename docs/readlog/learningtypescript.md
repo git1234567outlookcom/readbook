@@ -566,7 +566,18 @@ PhantomJS
 
 ### 装饰器工厂
 
-这有个警告  
+**这有个警告**
+需要修改tsconfig.json
+
+
+```json
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "allowJs": true
+    }
+}
+```  
 
 
 
@@ -580,3 +591,27 @@ PhantomJS
 
 
 ### 反射元数据API
+
+
+
+
+# 应用架构
+
+## 单页面应用架构
+
+SPA就是一个web应用，所需的html、css、js在一次请求中就加载完成，不需要刷新动态加载
+
+
+## MV* 架构
+
+
+Model - View - Controller 
+
+Model-View-ViewModel
+
+Model-View-Presenter
+
+
+
+## MV* 框架中的组件和功能
+
