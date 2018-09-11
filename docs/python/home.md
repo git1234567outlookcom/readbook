@@ -2,6 +2,8 @@
 
 [anaconda](https://www.anaconda.com/download/#macos)
 
+[jupyter](http://jupyter.org/install.html)
+
 
 ---
 
