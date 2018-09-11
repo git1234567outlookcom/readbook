@@ -7,6 +7,7 @@
   - 状态管理 [Vuex](https://vuex.vuejs.org/zh/)
   - 发送请求 [axios](https://www.kancloud.cn/yunye/axios/234845)
   - 打包工具 [webpack](https://webpack.js.org/) 
+    - [html-webpack-plugin](https://www.npmjs.com/package/html-webpack-plugin)
   - 插件库 [npmjs](https://www.npmjs.com.cn/)
 
 - Web
@@ -19,6 +20,8 @@
 
 
 ---
+
+
 - 开发语言 
     - [TypeScript](https://www.tslang.cn/docs/home.html) 
     - [手册](https://typescript.bootcss.com/)
@@ -38,8 +41,11 @@
     - [Flex](https://www.runoob.com/w3cnote/flex-grammar.html)
     - [Bootstrap](https://v3.bootcss.com/getting-started/)
     - [sass](https://www.sass.hk/docs/)
+    
 - js 库 
     - [jQuery](https://api.jquery.com/)
+
+
 
 ---
 
