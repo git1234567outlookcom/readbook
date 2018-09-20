@@ -8,9 +8,7 @@
   - 发送请求 [axios](https://www.kancloud.cn/yunye/axios/234845)
   - 打包工具 [webpack](https://webpack.js.org/) 
   - 插件库   [npmjs](https://www.npmjs.com.cn/)
-  - 布局样式
-	- [Flex](https://www.runoob.com/w3cnote/flex-grammar.html)
-	- [sass](https://www.sass.hk/docs/)
+  - 布局样式 [Flex](https://www.runoob.com/w3cnote/flex-grammar.html) [sass](https://www.sass.hk/docs/)
 - Web
   - UI [element](http://element-cn.eleme.io/#/zh-CN/component/input)
   - 图表 [echarts](http://echarts.baidu.com/examples/)
@@ -20,7 +18,6 @@
   - 图表 [F2](https://antv.alipay.com/zh-cn/f2/3.x/demo/index.html)
 
 
- 
 ---
 
 
