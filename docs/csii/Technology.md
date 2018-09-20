@@ -25,20 +25,15 @@
 	- [TypeScript](https://www.tslang.cn/docs/home.html) 
 	- [手册](https://typescript.bootcss.com/)
 
-- 项目脚手架 
-	- [Vue CLI 3](https://cli.vuejs.org/)
+- 项目脚手架   [Vue CLI 3](https://cli.vuejs.org/)
 
-- 打包工具
-	- [yarn](https://yarn.bootcss.com/docs/getting-started/)
+- 打包工具  [yarn](https://yarn.bootcss.com/docs/getting-started/)
 	   
-- js 库 
-	- [jQuery](https://api.jquery.com/)
+- js 库  [jQuery](https://api.jquery.com/)
   
-- js 测试
-	- [mochajs](https://mochajs.org/)
+- js 测试 [mochajs](https://mochajs.org/)
 	
-- js 规范
-    - [eslint](https://eslint.org/)
+- js 规范 [eslint](https://eslint.org/)
 
 
 
