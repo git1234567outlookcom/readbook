@@ -194,3 +194,8 @@ var arr2 = [].concat(arr)
 
 var zoo = ['dog','pig']
 
+
+
+document.getElementById('test')
+
+document.getElementsByTagName("name")
