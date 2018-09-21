@@ -525,4 +525,353 @@ json2.js
 - Document 
 
 
-# DOM
+# 第九章 DOM
+
+
+
+> DOM  文档对象模型
+
+
+dom树中的一个个对象被称为节点
+
+节点之间形成了一个树形结构
+
+
+## 节点的选择
+
+```js
+    document.getElementById();
+    document.getElementsByTagName()
+```
+
+
+getElementsByTagName 取得的对象是一个NodeList对象，是一个live对象，live对象始终具有dom树实体的引用
+
+dom树做出的变更也会在live对象中得到体现
+
+
+通过nodelist对象获取元素将花费相当的时间，先将其转换为array对象后再使用比较好
+
+
+
+
+
+- XPath
+
+- selector API
+
+
+## 节点的创建和新增
+
+```js
+    document.createElement('div')
+    document.createTextNode("")
+    document.removeChild('')
+```
+
+## innerHTML / textContent
+
+innerHTML 属性赋值之后， 浏览器会分析其内容，将分析结果设为该元素的子元素
+
+
+textContent 可以取得包含子元素在内的纯文本部分
+
+
+```js
+    document.createDocumentFragment()  // 可以降低画面的重绘次数
+```
+
+
+# 第十章 事件
+
+
+事件驱动程序设计
+
+
+## 事件处理程序/事件侦听器的设定
+
+
+对事件的处理方式被称为事件处理程序或事件侦听器
+
+- 指定为html元素的属性 事件处理程序
+- 指定为dom元素的属性  事件处理程序
+- 通过EventTarget.addEventListener（） 进行值定   事件侦听器
+
+
+```js
+
+test.onclick = say
+
+```
+
+
+
+
+事件处理
+
+- 捕获阶段
+    事件将会从window对象开始向下遍历dom树来传播
+
+- 目标阶段
+    被事件目标注册的事件侦听器将会被执行
+    
+- 事件冒泡阶段
+    时间的传播方式为从事件目标开始向上遍历dom树，知道windows对象结束
+    
+    
+
+
+事件所有具有的元素
+- type 
+- target 
+- currentTarget
+- eventPhase
+- eventPhase  事件传播到哪一个阶段
+- timeStamp
+- bubbles 事件处于冒泡状态
+- cancelable 事件能够执行preventDefault方法
+
+
+
+## 标准事件
+
+- htmlEvent
+- mouseEvent
+- UIEvent  元素是否获取焦点
+- MutationEvent  dom节点操作相关
+
+
+## 自定义事件
+
+
+通过createEvent方法来创建一个事件对象
+
+通过目标节点的dispatch方法来分发这一事件对象
+
+
+
+
+
+
+
+
+# 第十一章  客户端js实践
+
+
+
+classList 
+- contains() 判断是否含有class
+- add（）
+- remove
+- toggle（）
+ ```js
+
+var d1 = document.getElementById();
+d1.onclick = function() {
+    this.classList.toggle()
+    // class 名中含有该样式，有删除之后添加
+}
+
+```
+
+
+
+
+## 更改style
+
+## 直接更改样式表
+
+
+pisition 位置
+- static 
+- fixed  将会以浏览器窗口为基准来确定元素的相对位置，页面滚动，元素位置不会发生改变
+- absolute 相对位置进行定位，通常相对与body
+- relative  相对定位，不会再设置top、left
+
+
+
+
+位置
+- screenX  屏幕坐标
+- clientX  窗口坐标
+- pageX   获取元素在文档中的位置
+
+
+
+## JSONP
+
+将script标签的src 属性指定为其他域中的js文件载入
+
+
+iframe攻击
+
+通过iframe来进行跨源通信
+
+
+# 第十二章 库
+
+jQuery 没用过，打算了解一下的时候，github竟然把它抽离了出来。又迟疑，现在项目功能还没有需要的地方，观望下
+
+
+## 链式语法
+
+大部分方法都会返回一个jquery对象
+
+调试的时候麻烦
+
+
+
+#  第十四章 web应用程序
+
+
+## History API
+
+
+## Application Cache
+
+通过text/cache-manifest这一MIME Type来发布缓存清单文件
+
+使用Apache，则将在缓存清单文件所在的同一个文件夹内创建一个名为.htaccess的文件并记录AddType目录信息
+
+以设定支持特定扩展名的MIME Type
+
+
+
+
+
+缓存清单文件
+
+- 缓存清单文件的创建
+    是一个记录了缓存规则的简单的文本文件
+    
+- 缓存的更新
+    浏览器将首先引用被缓存的文件并显示，之后在后台自动确认缓存文件清单是否需要更新
+    
+- NETWORK 区段
+    NETWORK： 之后的部分都将被作为NETWORK区段
+    
+- FLALLBACK区段
+    指定某一资源无法被访问时的替代资源
+    
+    
+## ApplicationCache API
+
+
+
+
+# 第十五章  与桌面应用的协作
+
+
+- Drag Drop API  一种能够在浏览器中实现DOM元素的拖动与释放的API
+
+
+Data Transfer ：所有的拖动事件的事件对象中，都含有dataTransfer属性，用来接收数据
+- 数据的接收
+- 数据处理方式的指定
+- 拖动图像的设定
+
+
+
+
+## 基本的拖动与释放
+
+
+- 拖动元素的设定 
+```html
+<div draggable="true" ></div>
+```
+
+- 拖动方的设定
+
+需要在开始拖动的时候将数据设置于 dataTransfer中
+
+调用setData方法来将拖动的数据设置给dataTransfer 
+
+- 释放方的设定
+
+getData是一种只能在drop事件处理程序中执行的方法
+
+
+```js
+// 释放区域
+var drophere = document.getElementById('drophere')
+
+// 拖拽到释放区域之上
+drophere.ondragover  = function(event) { // 将drop事件取消
+    for ( var i = 0 ; i < event.type[i] == 'text/plain';i ++) {
+        if (event.dataTransfer.types[i] === 'text/plain'){ // 判断类型为text时候生效
+            event.preventDefault();  // 用于取消浏览器的默认操作的方法
+            break;
+        } 
+    }
+}
+
+
+// 拖拽元素被释放于释放区域中时
+drophere.ondrop = function(event) {
+    event.preventDefault(); // 取消浏览器默认操作
+    
+    // 获取拖拽数据
+    
+    var youname = event.dataTransfer.getData('text/plain')
+    alert('hellp' + youname)
+}
+```
+
+
+
+## 自定义显示
+
+- 拖动图像的更改
+
+
+只能在dragstart事件中调用setDragImage 或这addelement，可以以任意DOM元素为参数的
+
+
+- 释放区域的强调显示
+
+dragover事件中添加效果
+
+需要在dragover事件中添加能够对动作进行说明的效果
+
+在dragleave事件中以及drop事件中删除效果 
+
+```js
+
+element.ondragenter = function(e) {
+    //添加效果
+}
+
+```
+
+
+--- 
+
+
+文件的Drag-In / Drag-Out
+ 
+
+
+获取桌面程序中的文件
+
+
+```js
+
+element.ondragover =function(e) {
+   e.preventDefault(); // 拖动有效
+}
+
+
+
+```
+
+
+
+## File API
+
+
+
+# 存储
+
+
+
