@@ -871,7 +871,257 @@ element.ondragover =function(e) {
 
 
 
-# 存储
+# 第十六章 存储
+
+web storage 是一种可以简单的将js所处理的数据永久保存的接口
+
+- k-v 形式存储
+- 能够与普通的js对象相同的方式来进行读写操作
+- 能够保存大量数据
+
+
+--
+
+localStorage、sessionStorage
+
+在全局对象中定义的localStorage与sessionStorage这两种对象
+
+- localStorage没有显示的删除,即使浏览器重启也不会丢失
+- sessionStorage中数据仅能在同一个会话内得以保留
 
 
 
+sessionStorage的生命周期
+- 共享
+  通常的页面跳转时
+
+  在iframe内打开了子页面
+
+  从崩溃中恢复时
+
+  重新载入时
+  
+
+- 没有共享sessionStorage的情况
+
+在新窗口或标签页中打开了页面
+
+窗口被关闭又被重新打开时
+
+
+
+---
+
+
+源origin
+
+指的是协议、主机名与端口号所组成的标识符
+
+web Storage中保存额数据只能被在同一个源中执行的程序所共享
+
+同源的情况下允许访问的规则称为同源策略
+
+不同源直接的安全进行访问,会用到Cross-Origin Resource Sharing  CORS 跨源资源共享
+
+
+
+- Cookie
+    - 只有4kb
+    - 向服务器发生请求时Cookie将被一起发送
+    - 常用于保存会话信息等重要的信息
+
+# Indexed Database
+
+是一种在浏览器中通过js进行操作的数据库
+
+
+```js
+
+var db = null;
+
+var request = indexedDB.open();
+
+request.onsuccess = function(event){
+    db =event.target.result
+}
+
+```
+
+这数据库没怎么听说,如果真的起来了,应用还挺广泛的
+
+
+# 第十七章 WebSocket
+
+一种用于在服务器与客户端之间实现高效的双向通信的机制
+
+
+
+```js
+
+var ws = new WebSocket('ws://www.foo.org.bar','subprotocol')
+
+
+```
+
+通过握手之后,就建立了一个链接
+
+
+wss 协议能够以TLS对通信加密
+
+没有指定端口,则将分别默认使用80和443端口,将不会受到同源策略的制约
+
+
+```js
+ ws.open =function(event) {
+   //建立链接处理的程序
+ }
+ 
+ 
+ ws.send('hello');  //发送数据
+
+ws.onmessage = function(event) {  //接收数据
+  var receivedMessage = event.data;
+}
+```
+
+
+进行收发的数据格式 字符串、Blob、以及ArrayBuffer 
+
+
+# 第十八章  Web Workers
+
+是一种能够在另外的线程中创建新的js运行环境，以使js代码能够在后台处理的一种机制，不妨碍用户的ui操作
+
+
+
+通常客户端js运行环境称作主线程，通过web workers 创建的后台js运行环境称为工作线程worker 
+
+可以在主线程中创建工作线程，且能够同时创建多个工作线程
+
+主线程与工作线程的sj运行环境是相互分离的，无法相互引用，各自的环境中分别准备了全局对象
+
+工作线程中的环境无法引用document对象的 
+
+可以通过window这一名称来引用主线程的全局对象
+
+通过self引用工作线程的全局对象
+
+
+则dom的修改和引用只能在主线程中进行
+
+要在工作线程中进行需要通过消息收发接口postMessage方法message事件来进行
+
+
+```js
+
+var worker = new Worker('worker.js')
+
+
+
+//主线程消息收发
+worker.postMessage('test');
+worker.onmessage = function(e) {
+    var receivedMessage = e.data ; // 获取发送数据
+}
+
+// 主线程中进行删除
+worker.terminate()
+self.close() ; // 工作线程中删除自身的情况
+
+
+// 读取外部文件
+self.importScripts('test.js');
+```
+
+
+
+```js
+//工作线程实现搜索
+
+var  userList=[
+    'test'
+]
+
+self.onmessage = function(event) { //接收消息
+  var reg  = new RegExp(event.data,'i'),html = '';
+  
+  userList.forEach(function(user) {
+    if (reg.test(user)){
+        html +=  '<li>' + user + '</li>';
+    } 
+  })
+}
+
+// 发送消息
+self.postMessage(html)
+
+
+// 主线程处理
+
+
+
+var worker = new Worker('test.js'), // 创建工作线程
+
+text = document.getElementById('textbox'),
+
+results = document.getElementById('resulets');
+
+worker.onmessage = function(event) { // 接收工作线程的数据
+    results.innerHTML = event.data;
+}
+
+
+
+```
+
+
+
+中断工作线程的处理
+
+
+- 重新创建工作线程（ 在主线程）
+- 使用计时器（在工作线程）
+
+
+
+## 共享工作线程
+
+一个工作线程可以被多个页面共享引用，此时同源策略限制存在，但是可以在不同的窗口之间引用同一个共享线程
+
+
+
+```js
+var  worker = new SharedWorker('test.js')
+
+
+worker.port.postMessage('发送消息')
+
+
+worker.port.onmessage = function(event) {
+  var receiveData = event.data;  // 接收消息
+}
+```
+
+
+在主线程中常见共享线程后
+
+就会触发工作线程的connect事件
+
+connect事件中有一个MessagePort对象
+
+该对象与请求连接的主线程中所具有的MessagePort对象是相对应的
+
+
+```js
+
+self.onconnect = function(connectEvent) {
+  //获取连接请求方的messagePort
+  var  port = connectEvent.port[0];
+  
+   port.postMessage('发送消息')
+   
+   port.onmessage = function(messageEvent) {
+     var data = messageEvent.data ;  // 接收消息
+   }
+}
+```
